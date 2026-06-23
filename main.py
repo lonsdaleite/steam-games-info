@@ -11,6 +11,10 @@ from pathlib import Path
 
 import decky
 
+PY_MODULES_DIR = os.path.join(decky.DECKY_PLUGIN_DIR, "backend", "py_modules")
+if os.path.isdir(PY_MODULES_DIR) and PY_MODULES_DIR not in sys.path:
+    sys.path.insert(0, PY_MODULES_DIR)
+
 BACKEND_DIR = os.path.join(decky.DECKY_PLUGIN_DIR, "backend")
 if BACKEND_DIR not in sys.path:
     sys.path.insert(0, BACKEND_DIR)

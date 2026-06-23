@@ -3,6 +3,7 @@ dist/
 release-staging/
 package-lock.json
 __pycache__/
+backend/py_modules/
 *.pyc
 *.log
 *.zip

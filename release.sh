@@ -17,6 +17,7 @@ fi
 
 echo "Building ${PLUGIN_NAME} v${VERSION}..."
 pnpm run build
+./scripts/bundle_py_deps.sh
 
 rm -rf release-staging
 mkdir -p "$STAGING_DIR"
@@ -26,7 +27,7 @@ cp -r dist main.py plugin.json package.json LICENSE README.md backend "$STAGING_
 rm -f "${ZIP_SLUG}"-v*.zip
 (
   cd release-staging
-  zip -r "../${ZIP_NAME}" "$PLUGIN_NAME" -x "*.DS_Store"
+  zip -r "../${ZIP_NAME}" "$PLUGIN_NAME" -x "*.DS_Store" "*__pycache__*"
 )
 
 echo "Created ${ZIP_NAME}"
