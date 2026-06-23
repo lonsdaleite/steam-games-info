@@ -1,0 +1,11 @@
+{
+  "name": "Steam Games Info",
+  "author": "lonsdaleite",
+  "flags": [],
+  "api_version": 1,
+  "publish": {
+    "tags": ["steam", "linux", "proton", "games", "library"],
+    "description": "Browse installed Steam games with offered/installed builds, runnable platforms, and default launch info.",
+    "image": ""
+  }
+}
